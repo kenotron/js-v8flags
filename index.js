@@ -66,7 +66,7 @@ function getFlags (cb) {
       return exclusions.indexOf(name) === -1;
     });
     return cb(null, flags);
-  });
+  }, { stdio: "inherit" });
 }
 
 // write some json to a file descriptor. if this fails, call back
